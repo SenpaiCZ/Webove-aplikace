@@ -1,25 +1,23 @@
 <!DOCTYPE html>
 <html lang='cs'>
-  <head>
-    <title></title>
-    <meta charset='utf-8'>
-    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
-  </head>
-  <body>
-    <h1>Základní kalkulačka</h2>
-    
-     <input id="a1">
-     <input id="a2">
-     <button onclick="countthat()">Počítej</button>
-     <span id="vysledek"><span>
-     <script>
-     function countthat(){
-     x = document.getElementById("a1").value;
-     y = document.getElementById("a2").value;
-     v=x+y;
-     document.getElementById("vysledek").innerHTML = "Výsledek je " + v;
-     }
-     </script>
-  </body>
+<head>
+<title></title>
+<meta charset='utf-8'>
+<!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->
+</head>
+<body>
+<h1>Základní kalkulačka</h2>
+<input id="cislo1">
+<input id="cislo2">
+<button onclick="pocitej()">Počítej!</button>
+<span id="vysledek"></span>
+<script>
+function pocitej(){
+cislo1 = Number(document.getElementById("cislo1").value);
+cislo2 = Number(document.getElementById("cislo2").value);
+vysledek = cislo1 + cislo2;
+document.getElementById("vysledek").innerHTML = "Výsledek je " + vysledek;
+}
+</script>
+</body>
 </html>
-\ No newline at end of file
