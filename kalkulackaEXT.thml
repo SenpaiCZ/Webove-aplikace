@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang='cs'>  
+  <head>    
+    <title>Kalkulačka
+    </title>    
+    <meta charset='utf-8'>    
+    <!-- <meta http-equiv='X-UA-Compatible' content='IE=edge'> -->  
+  </head>  
+  <body>  <h1>Kalkulačka</h1>  
+    <input id="cislo1">  
+    <input id="cislo2">  
+    <button onclick="scitej()">Sčítej!
+    </button>  
+    <button onclick="odcitej()">Odčítej!
+    </button>  
+    <button onclick="nasob()">Násob!
+    </button>  
+    <button onclick="del()">Děl!
+    </button>  
+    <span id="vysledek">
+    </span>  
+<script>
+  function scitej(){
+   cislo1 = Number(document.getElementById("cislo1").value);
+   cislo2 = Number(document.getElementById("cislo2").value);
+   vysledek = cislo1 + cislo2;
+   document.getElementById("vysledek").innerHTML = "Výsledek je " + vysledek;
+   }
+   function odcitej(){
+   cislo1 = Number(document.getElementById("cislo1").value);
+   cislo2 = Number(document.getElementById("cislo2").value);
+   vysledek = cislo1 - cislo2;
+   document.getElementById("vysledek").innerHTML = "Výsledek je " + vysledek;
+   }
+   function nasob(){
+   cislo1 = Number(document.getElementById("cislo1").value);
+   cislo2 = Number(document.getElementById("cislo2").value);
+   vysledek = cislo1 * cislo2;
+   document.getElementById("vysledek").innerHTML = "Výsledek je " + vysledek;
+   }
+   function del(){
+   cislo1 = Number(document.getElementById("cislo1").value);
+   cislo2 = Number(document.getElementById("cislo2").value);
+   vysledek = cislo1 / cislo2;
+   vysledek = Math.floor(vysledek);
+   vysledek2 = cislo1 % cislo2;
+   document.getElementById("vysledek").innerHTML = "Výsledek je " + vysledek + " a zbytek je " + vysledek2;
+   }
+  </script>  
+  </body>
+</html>
